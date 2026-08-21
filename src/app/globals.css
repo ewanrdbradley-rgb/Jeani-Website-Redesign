@@ -39,8 +39,8 @@ body {
 /* headlines: Inter Black, tight tracking, oversized, sentence case */
 .headline {
   font-weight: 900;
-  letter-spacing: -0.118em; /* brand titles: tracking -118 */
-  word-spacing: 0.118em; /* offset so tracking tightens letters, not the gaps between words */
+  letter-spacing: -0.08em; /* brand titles: tracking -80 */
+  word-spacing: 0.08em; /* offset so tracking tightens letters, not the gaps between words */
   line-height: 1.0;
   color: #102278;
 }

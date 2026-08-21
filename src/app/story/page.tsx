@@ -16,7 +16,7 @@ const TEAM = [
     name: "Ewan Bradley",
     role: "Co-founder and CEO",
     img: "/photos/ewan.jpg",
-    position: "center 30%",
+    position: "center 28%",
     href: "https://www.linkedin.com/in/ewanrdbradley/",
     linkLabel: "linkedin.com/in/ewanrdbradley",
   },

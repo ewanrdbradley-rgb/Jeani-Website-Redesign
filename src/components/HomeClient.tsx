@@ -17,6 +17,12 @@ import ClosingCta from "./ClosingCta";
 export default function HomeClient() {
   const [selected, setSelected] = useState<GoalId>("marathon");
   const goal = GOALS.find((g) => g.id === selected) ?? GOALS[0];
+  const selectedIndex = GOALS.findIndex((g) => g.id === selected);
+  const phoneTrio = [
+    GOALS[(selectedIndex + GOALS.length - 1) % GOALS.length],
+    GOALS[selectedIndex],
+    GOALS[(selectedIndex + 1) % GOALS.length],
+  ];
 
   return (
     <ThreadLine>
@@ -26,7 +32,14 @@ export default function HomeClient() {
           <h1 className="headline h-hero">
             The personal health agent built around{" "}
             <CyclingWord
-              words={["your marathon PR", "your comeback", "moving well for life"]}
+              words={[
+                "your marathon PR",
+                "your first 5k",
+                "your comeback",
+                "your trail ultra",
+                "moving well for life",
+                "triathlon season",
+              ]}
             />
           </h1>
           <p className="lede mt-6 max-w-md">Personalizing your preventive health.</p>
@@ -124,8 +137,8 @@ export default function HomeClient() {
           <h2 className="headline h-sect mt-3">No two dashboards look the same</h2>
           <p className="lede mt-4">
             The thread ends up here, inside your Today feed. Jeani rebuilds it around
-            the goal and the body it belongs to, so a marathoner, a comeback and a
-            lifetime of moving well each get a different morning.
+            the goal and the body it belongs to. Six goals, six different mornings,
+            and no two of them ever look the same.
           </p>
         </Reveal>
         <div className="mt-8 flex flex-wrap gap-2.5">
@@ -146,7 +159,7 @@ export default function HomeClient() {
         </div>
         <Reveal delay={100}>
           <div className="mt-12 flex flex-wrap items-end justify-center gap-6 md:flex-nowrap">
-            {GOALS.map((g) => (
+            {phoneTrio.map((g) => (
               <button
                 key={g.id}
                 onClick={() => setSelected(g.id)}

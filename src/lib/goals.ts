@@ -1,4 +1,10 @@
-export type GoalId = "marathon" | "comeback" | "life";
+export type GoalId =
+  | "marathon"
+  | "comeback"
+  | "life"
+  | "first5k"
+  | "ultra"
+  | "tri";
 
 export type Score = {
   label: string;
@@ -111,6 +117,96 @@ export const GOALS: Goal[] = [
     bubbles: [
       "Your evening walks are moving your resting heart rate the right way. Two beats under your normal this week.",
       "You wound down before 10pm five nights this week. Sleep followed. Keep the streak alive tonight.",
+    ],
+  },
+  {
+    id: "first5k",
+    chip: "First 5k",
+    line: "From the sofa to the start line in eight weeks.",
+    message: "Three runs in, your body is adapting",
+    checklistTitle: "Week 3 of 8",
+    checklist: [
+      { text: "Run-walk 25 minutes, done", done: true },
+      { text: "Rest day, taken seriously", done: true },
+      { text: "28 minutes Saturday, nice and slow", done: false },
+    ],
+    scores: [
+      {
+        label: "Motion score",
+        value: 72,
+        normal: "your 30-day normal: 68",
+        points: [58, 60, 59, 62, 64, 63, 66, 68, 70, 72],
+      },
+      {
+        label: "Recovery",
+        value: 88,
+        normal: "your 30-day normal: 82",
+        points: [74, 76, 75, 78, 80, 79, 82, 84, 86, 88],
+      },
+    ],
+    bubbles: [
+      "Three weeks in and your motion score is climbing. Your body is adapting faster than the plan expected.",
+      "Saturday is 28 minutes. Slow enough to talk, and the distance will take care of itself.",
+    ],
+  },
+  {
+    id: "ultra",
+    chip: "Trail ultra",
+    line: "Fifty kilometers of climbing, built one weekend at a time.",
+    message: "Climb legs are coming along",
+    checklistTitle: "Big weekend block",
+    checklist: [
+      { text: "Back to back long runs, done", done: true },
+      { text: "Vert target reached, 1,400m", done: true },
+      { text: "Ankle drills before Thursday", done: false },
+    ],
+    scores: [
+      {
+        label: "Vertical load",
+        value: 76,
+        normal: "your 30-day normal: 71",
+        points: [60, 63, 62, 66, 65, 69, 68, 72, 74, 76],
+      },
+      {
+        label: "Ankle stability",
+        value: 83,
+        normal: "your 30-day normal: 81",
+        points: [76, 78, 77, 79, 80, 79, 81, 82, 82, 83],
+      },
+    ],
+    bubbles: [
+      "Back to back weekend runs landed well. Vertical load stayed inside the range you can absorb.",
+      "Your right ankle wobbles a little more when you are tired. Two minutes of drills before Thursday would go a long way.",
+    ],
+  },
+  {
+    id: "tri",
+    chip: "Triathlon season",
+    line: "Three sports, one body, one season to get it right.",
+    message: "The bike is carrying the load well",
+    checklistTitle: "Race week minus six",
+    checklist: [
+      { text: "Swim technique session, done", done: true },
+      { text: "Long ride Saturday, done", done: true },
+      { text: "Brick run Sunday, keep it easy", done: false },
+    ],
+    scores: [
+      {
+        label: "Training balance",
+        value: 79,
+        normal: "your 30-day normal: 74",
+        points: [62, 65, 64, 68, 70, 69, 72, 74, 76, 79],
+      },
+      {
+        label: "Left knee",
+        value: 85,
+        normal: "your 30-day normal: 84",
+        points: [80, 81, 80, 82, 83, 82, 84, 83, 84, 85],
+      },
+    ],
+    bubbles: [
+      "The long ride left your legs fresher than usual. The fitness is showing up where you want it.",
+      "Brick run tomorrow. Keep the first ten minutes easy and let your stride settle before you push.",
     ],
   },
 ];

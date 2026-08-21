@@ -15,15 +15,15 @@ export default function CyclingWord({ words }: { words: string[] }) {
       setTimeout(() => {
         setIndex((i) => (i + 1) % words.length);
         setVisible(true);
-      }, 420);
-    }, 3200);
+      }, 300);
+    }, 2000);
     return () => clearInterval(cycle);
   }, [words.length]);
 
   return (
     <span
       className="text-accent inline-block"
-      style={{ opacity: visible ? 1 : 0, transition: "opacity 400ms ease-out" }}
+      style={{ opacity: visible ? 1 : 0, transition: "opacity 280ms ease-out" }}
     >
       {words[index]}
     </span>

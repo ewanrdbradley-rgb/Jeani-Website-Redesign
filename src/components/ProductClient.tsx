@@ -76,9 +76,9 @@ export default function ProductClient() {
               <p className="eyebrow">01</p>
               <h2 className="headline h-sect mt-3">Set your goal</h2>
               <p className="lede mt-4 max-w-md">
-                Marathon PR, injury comeback, or moving well for life. One choice,
-                made once, in your own words. It becomes the lens for everything
-                Jeani reads and says.
+                A marathon PR, a first 5k, a comeback, a trail ultra, a triathlon
+                season, or simply moving well for life. One choice, in your own
+                words. It becomes the lens for everything Jeani reads and says.
               </p>
             </Reveal>
             <Reveal delay={120}>
