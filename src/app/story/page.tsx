@@ -85,16 +85,23 @@ export default function StoryPage() {
               <Photo
                 src="/photos/founders.jpg"
                 alt="The three Jeani founders laughing together in the Duke training facility"
-                className="aspect-[4/3] rounded-[1.75rem] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.4)]"
+                className="aspect-[4/3] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.4)]"
                 sizes="(min-width: 768px) 50vw, 100vw"
               />
-              <div className="card absolute -bottom-6 -left-4 hidden w-36 rotate-[-2deg] overflow-hidden md:block">
+              <div className="absolute -bottom-8 -left-6 hidden items-end gap-3 md:flex">
                 <Image
-                  src="/photos/vintage.jpg"
-                  alt="An archival race photo from the founders' families' running past"
+                  src="/photos/hospital-1.jpg"
+                  alt="A founder recovering in a hospital bed after injury"
                   width={288}
-                  height={369}
-                  className="w-full"
+                  height={216}
+                  className="w-36 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
+                />
+                <Image
+                  src="/photos/hospital-2.jpg"
+                  alt="A family member in a hospital bed, the cost of a lifetime of impact"
+                  width={216}
+                  height={288}
+                  className="w-28 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
                 />
               </div>
             </div>
@@ -119,7 +126,7 @@ export default function StoryPage() {
             <Photo
               src="/photos/trio.jpg"
               alt="Ewan Bradley, Michael Bennett and Stuart Bladon standing together in Duke blue"
-              className="aspect-[3/2] rounded-[1.75rem] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.35)]"
+              className="aspect-[3/2] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.35)]"
               sizes="(min-width: 768px) 50vw, 100vw"
             />
           </Reveal>
@@ -131,7 +138,7 @@ export default function StoryPage() {
                 href={member.href}
                 target="_blank"
                 rel="noreferrer"
-                className="card card-lift block overflow-hidden"
+                className="card card-lift block overflow-hidden !rounded-none"
               >
                 <div className="relative aspect-[4/5]">
                   <Image

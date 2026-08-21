@@ -56,7 +56,7 @@ export default function HomeClient() {
           <Photo
             src="/photos/hero.jpg"
             alt="Two runners striding up a volcanic trail against an open sky"
-            className="aspect-[4/5] rounded-[1.75rem] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.4)] md:aspect-[5/6]"
+            className="aspect-[4/5] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.4)] md:aspect-[5/6]"
             sizes="(min-width: 768px) 50vw, 100vw"
             priority
           />
