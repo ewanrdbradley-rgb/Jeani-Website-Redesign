@@ -16,7 +16,7 @@ export default function PhoneMockup({
 }) {
   return (
     <div
-      className={`w-[248px] shrink-0 rounded-[2.2rem] border bg-white p-2.5 transition-all duration-500 ease-out ${
+      className={`w-[248px] shrink-0 rounded-[2.2rem] border bg-white p-2.5 transition-all duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
         active
           ? "z-10 -translate-y-2 scale-[1.03] border-cobalt/10 shadow-[0_36px_70px_-30px_rgba(16,34,120,0.45)]"
           : "scale-[0.97] border-cobalt/8 opacity-70 shadow-[0_24px_50px_-30px_rgba(16,34,120,0.3)]"

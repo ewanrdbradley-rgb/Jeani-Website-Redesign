@@ -65,7 +65,7 @@ export default function Sparkline({
         style={{
           strokeDasharray: 1,
           strokeDashoffset: drawn ? 0 : 1,
-          transition: "stroke-dashoffset 1100ms ease-out",
+          transition: "stroke-dashoffset 1400ms cubic-bezier(0.22, 1, 0.36, 1)",
         }}
       />
     </svg>

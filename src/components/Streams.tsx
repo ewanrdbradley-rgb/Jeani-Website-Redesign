@@ -58,7 +58,7 @@ export default function Streams() {
           style={{
             strokeDasharray: 1,
             strokeDashoffset: drawn ? 0 : 1,
-            transition: `stroke-dashoffset 1300ms ease-out ${i * 140}ms`,
+            transition: `stroke-dashoffset 1600ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 160}ms`,
           }}
         />
       ))}
@@ -73,7 +73,7 @@ export default function Streams() {
           fontWeight="600"
           style={{
             opacity: drawn ? 1 : 0,
-            transition: `opacity 460ms ease-out ${i * 140}ms`,
+            transition: `opacity 600ms cubic-bezier(0.22, 1, 0.36, 1) ${i * 160}ms`,
           }}
         >
           {label}
@@ -84,7 +84,7 @@ export default function Streams() {
         cy="100"
         r="4"
         fill="#0068b5"
-        style={{ opacity: drawn ? 1 : 0, transition: "opacity 460ms ease-out 900ms" }}
+        style={{ opacity: drawn ? 1 : 0, transition: "opacity 600ms cubic-bezier(0.22, 1, 0.36, 1) 1000ms" }}
       />
       <text
         x="588"
@@ -92,7 +92,7 @@ export default function Streams() {
         fill="#0068b5"
         fontSize="13"
         fontWeight="600"
-        style={{ opacity: drawn ? 1 : 0, transition: "opacity 460ms ease-out 1000ms" }}
+        style={{ opacity: drawn ? 1 : 0, transition: "opacity 600ms cubic-bezier(0.22, 1, 0.36, 1) 1100ms" }}
       >
         One record of you
       </text>

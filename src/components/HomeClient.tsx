@@ -7,6 +7,7 @@ import ThreadLine from "./ThreadLine";
 import Reveal from "./Reveal";
 import CyclingWord from "./CyclingWord";
 import Photo from "./Photo";
+import ParallaxBand from "./ParallaxBand";
 import Streams from "./Streams";
 import PhoneMockup from "./PhoneMockup";
 import ChatBubbles from "./ChatBubbles";
@@ -195,25 +196,19 @@ export default function HomeClient() {
         </div>
       </section>
 
-      {/* 6 · belief band, pinned over a passing photo */}
-      <section className="relative h-[170vh]">
-        <div className="absolute inset-0">
-          <Photo
-            src="/photos/dusk.jpg"
-            alt="A line of runners silhouetted against a golden evening sky"
-            className="h-full w-full"
-          />
+      {/* 6 · belief band: the box holds the center, the photo glides behind */}
+      <ParallaxBand
+        src="/photos/dusk.jpg"
+        alt="A line of runners silhouetted against a golden evening sky"
+      >
+        <div className="shell">
+          <Reveal>
+            <h2 className="headline h-band max-w-4xl rounded-3xl bg-bone/80 p-8 backdrop-blur-sm md:p-12">
+              Movement is for everyone. So Jeani is different for everyone.
+            </h2>
+          </Reveal>
         </div>
-        <div className="sticky top-0 flex h-screen items-center">
-          <div className="shell">
-            <Reveal>
-              <h2 className="headline h-band max-w-4xl rounded-3xl bg-bone/80 p-8 backdrop-blur-sm md:p-12">
-                Movement is for everyone. So Jeani is different for everyone.
-              </h2>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      </ParallaxBand>
 
       {/* 7 · proof */}
       <section className="shell py-20 md:py-28">

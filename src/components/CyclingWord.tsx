@@ -2,30 +2,40 @@
 
 import { useEffect, useState } from "react";
 
-/* hero goal words cross-fade on a slow cycle */
+/*
+ * hero goal words: a fluid cross-fade. all words share one grid cell so
+ * the headline never reflows; the outgoing word drifts up as the next
+ * one rises in, like a stride, never a hard cut.
+ */
 export default function CyclingWord({ words }: { words: string[] }) {
   const [index, setIndex] = useState(0);
-  const [visible, setVisible] = useState(true);
+  const [prev, setPrev] = useState<number | null>(null);
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (reduced) return;
-    const cycle = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIndex((i) => (i + 1) % words.length);
-        setVisible(true);
-      }, 300);
-    }, 2000);
-    return () => clearInterval(cycle);
+    const t = setInterval(() => {
+      setIndex((i) => {
+        setPrev(i);
+        return (i + 1) % words.length;
+      });
+    }, 2400);
+    return () => clearInterval(t);
   }, [words.length]);
 
   return (
-    <span
-      className="text-accent inline-block"
-      style={{ opacity: visible ? 1 : 0, transition: "opacity 280ms ease-out" }}
-    >
-      {words[index]}
+    <span className="cycle-wrap text-accent" aria-live="polite">
+      {words.map((w, i) => (
+        <span
+          key={w}
+          aria-hidden={i !== index}
+          className={`cycle-word ${
+            i === index ? "is-current" : i === prev ? "is-prev" : ""
+          }`}
+        >
+          {w}
+        </span>
+      ))}
     </span>
   );
 }

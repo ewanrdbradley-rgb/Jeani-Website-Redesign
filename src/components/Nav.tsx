@@ -25,14 +25,14 @@ export default function Nav() {
 
   return (
     <header
-      className={`sticky top-0 z-50 border-b transition-all duration-300 ease-out ${
+      className={`sticky top-0 z-50 border-b transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
         scrolled
           ? "border-cobalt/10 bg-bone/85 backdrop-blur-md"
           : "border-transparent bg-bone"
       }`}
     >
       <div
-        className={`shell flex items-center justify-between transition-all duration-300 ease-out ${
+        className={`shell flex items-center justify-between transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
           scrolled ? "py-2.5" : "py-4"
         }`}
       >
@@ -43,7 +43,7 @@ export default function Nav() {
             width={132}
             height={45}
             priority
-            className={`w-auto transition-all duration-300 ease-out ${
+            className={`w-auto transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
               scrolled ? "h-6" : "h-7"
             }`}
           />
