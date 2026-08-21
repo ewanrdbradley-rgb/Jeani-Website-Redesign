@@ -21,7 +21,7 @@ export default function ScoreCard({
           </p>
         )}
       </div>
-      <p className={`mt-1 font-black tracking-tight text-cobalt ${compact ? "text-[1.7rem] leading-none" : "text-4xl"}`}>
+      <p className={`t90 mt-1 font-black text-cobalt ${compact ? "text-[1.7rem] leading-none" : "text-4xl"}`}>
         {typeof score.value === "number" ? (
           <CountUp to={score.value} suffix={score.suffix ?? ""} />
         ) : (

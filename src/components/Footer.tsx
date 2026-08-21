@@ -28,6 +28,12 @@ export default function Footer() {
             <a href="mailto:ewan@jeanihealth.com" className="transition-colors hover:text-accent">
               ewan@jeanihealth.com
             </a>
+            <a href="mailto:michael@jeanihealth.com" className="transition-colors hover:text-accent">
+              michael@jeanihealth.com
+            </a>
+            <a href="mailto:stuart@jeanihealth.com" className="transition-colors hover:text-accent">
+              stuart@jeanihealth.com
+            </a>
             <a href="https://www.instagram.com/jeanihealth/" target="_blank" rel="noreferrer" className="transition-colors hover:text-accent">
               @jeanihealth
             </a>

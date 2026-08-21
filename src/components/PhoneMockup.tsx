@@ -26,7 +26,7 @@ export default function PhoneMockup({
         <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-cobalt/15" />
         <div key={animateFeed ? goal.id : "static"} className="flex flex-col gap-2.5">
           <div className="feed-item flex items-baseline justify-between px-1" style={{ animationDelay: "0ms" }}>
-            <p className="text-sm font-black tracking-tight text-cobalt">Today</p>
+            <p className="t90 text-sm font-black text-cobalt">Today</p>
             <p className="text-[0.625rem] font-medium text-cobalt/50">{goal.chip}</p>
           </div>
 

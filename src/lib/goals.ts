@@ -51,6 +51,13 @@ export const GOALS: Goal[] = [
         normal: "your 30-day normal: 79",
         points: [74, 76, 73, 77, 78, 76, 79, 78, 80, 81],
       },
+      {
+        label: "Weekly volume",
+        value: 62,
+        suffix: "k",
+        normal: "your 30-day normal: 55k",
+        points: [42, 46, 44, 50, 48, 53, 51, 56, 58, 62],
+      },
     ],
     bubbles: [
       "Tuesday's intervals landed well. Left knee load stayed inside your normal range the whole session.",
@@ -83,6 +90,13 @@ export const GOALS: Goal[] = [
         normal: "your 30-day normal: 90%",
         points: [81, 84, 83, 86, 88, 87, 89, 90, 91, 92],
       },
+      {
+        label: "Pain, in your words",
+        value: 1,
+        suffix: " of 10",
+        normal: "your 30-day normal: 3 of 10",
+        points: [6, 5, 5, 4, 4, 3, 3, 2, 2, 1],
+      },
     ],
     bubbles: [
       "Week six of your return to run. Load is climbing safely. Hold this volume for three more days.",
@@ -112,6 +126,12 @@ export const GOALS: Goal[] = [
         value: "7:42",
         normal: "your 30-day normal: 7:10",
         points: [66, 64, 68, 70, 67, 72, 74, 71, 76, 78],
+      },
+      {
+        label: "Active minutes",
+        value: 38,
+        normal: "your 30-day normal: 31",
+        points: [24, 27, 25, 29, 28, 31, 30, 33, 35, 38],
       },
     ],
     bubbles: [
@@ -143,6 +163,12 @@ export const GOALS: Goal[] = [
         normal: "your 30-day normal: 82",
         points: [74, 76, 75, 78, 80, 79, 82, 84, 86, 88],
       },
+      {
+        label: "Runs this month",
+        value: 9,
+        normal: "your 30-day normal: 6",
+        points: [2, 3, 3, 4, 5, 5, 6, 7, 8, 9],
+      },
     ],
     bubbles: [
       "Three weeks in and your motion score is climbing. Your body is adapting faster than the plan expected.",
@@ -173,6 +199,12 @@ export const GOALS: Goal[] = [
         normal: "your 30-day normal: 81",
         points: [76, 78, 77, 79, 80, 79, 81, 82, 82, 83],
       },
+      {
+        label: "Time on feet",
+        value: "4:10",
+        normal: "your 30-day normal: 3:30",
+        points: [55, 58, 57, 62, 64, 63, 68, 70, 72, 76],
+      },
     ],
     bubbles: [
       "Back to back weekend runs landed well. Vertical load stayed inside the range you can absorb.",
@@ -202,6 +234,13 @@ export const GOALS: Goal[] = [
         value: 84,
         normal: "your 30-day normal: 80",
         points: [72, 74, 73, 76, 78, 77, 80, 81, 82, 84],
+      },
+      {
+        label: "Court time",
+        value: "4:30",
+        suffix: "h",
+        normal: "your 30-day normal: 3:45h",
+        points: [48, 52, 50, 56, 58, 57, 62, 64, 66, 70],
       },
     ],
     bubbles: [

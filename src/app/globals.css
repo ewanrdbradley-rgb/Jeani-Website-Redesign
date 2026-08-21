@@ -163,6 +163,12 @@ body {
 }
 .pulse-once { animation: pulse-once 900ms ease-out 700ms 1 both; }
 
+/* the -90 title treatment, for product UI titles and metric readouts */
+.t90 {
+  letter-spacing: -0.09em;
+  word-spacing: 0.09em;
+}
+
 /* hero cycling words: stacked in one cell so the headline never reflows */
 .cycle-wrap {
   display: inline-grid;
