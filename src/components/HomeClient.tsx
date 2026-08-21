@@ -126,10 +126,10 @@ export default function HomeClient() {
 
       {/* breather */}
       <Photo
-        src="/photos/court.jpg"
-        alt="A player mid-stride on a blue court, caught in natural motion blur"
+        src="/photos/court-2.jpg"
+        alt="An athlete low and ready on a blue court, paddle in hand, caught in motion blur"
         className="h-52 w-full md:h-72"
-        position="center 56%"
+        position="center 54%"
       />
 
       {/* 4 · the dashboards, the centerpiece */}

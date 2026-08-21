@@ -63,50 +63,22 @@ export default function StoryPage() {
 
       {/* origin and team, one section */}
       <section className="shell py-20 md:py-28">
-        <div className="grid items-center gap-12 md:grid-cols-2">
-          <Reveal>
-            <p className="eyebrow">The origin</p>
-            <h2 className="headline h-sect mt-3">Fifteen years inside elite sport</h2>
-            <p className="copy mt-6">
-              For the best part of fifteen years we lived the cost of injury. All
-              three of our careers were disrupted, and in moments ended, by injuries
-              that better prevention could have foreseen. The warning signs were in
-              the data. Nobody was reading them.
-            </p>
-            <p className="copy mt-5">
-              Duke decathletes with five national titles, four All-American honors
-              and multiple school records between us, and backgrounds across
-              machine learning, neuroscience, biology, physiology, public policy
-              and business.
-            </p>
-            <div className="mt-8 hidden items-end gap-3 md:flex">
-              <Image
-                src="/photos/hospital-1.jpg"
-                alt="A founder recovering in a hospital bed after injury"
-                width={288}
-                height={216}
-                className="w-40 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
-              />
-              <Image
-                src="/photos/hospital-2.jpg"
-                alt="A family member in a hospital bed, the cost of a lifetime of impact"
-                width={216}
-                height={288}
-                className="w-32 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
-              />
-            </div>
-          </Reveal>
-          <Reveal delay={120}>
-            <Image
-              src="/photos/trio-cut.png"
-              alt="Ewan Bradley, Michael Bennett and Stuart Bladon standing together in Duke blue"
-              width={1600}
-              height={1281}
-              className="h-auto w-full"
-              priority={false}
-            />
-          </Reveal>
-        </div>
+        <Reveal className="max-w-2xl">
+          <p className="eyebrow">The origin</p>
+          <h2 className="headline h-sect mt-3">Fifteen years inside elite sport</h2>
+          <p className="copy mt-6">
+            For the best part of fifteen years we lived the cost of injury. All
+            three of our careers were disrupted, and in moments ended, by injuries
+            that better prevention could have foreseen. The warning signs were in
+            the data. Nobody was reading them.
+          </p>
+          <p className="copy mt-5">
+            Duke decathletes with five national titles, four All-American honors
+            and multiple school records between us, and backgrounds across
+            machine learning, neuroscience, biology, physiology, public policy
+            and business.
+          </p>
+        </Reveal>
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {TEAM.map((member, i) => (
             <Reveal key={member.name} delay={i * 120}>
