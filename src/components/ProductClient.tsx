@@ -98,12 +98,13 @@ export default function ProductClient() {
               <p className="eyebrow">02</p>
               <h2 className="headline h-sect mt-3">One continuous record</h2>
               <p className="lede mt-4 max-w-md">
-                Sleep, heart, training, movement. Read as one person, not four apps.
-                The record runs for years, so your normal is really yours.
+                Sleep, heart, training, movement, labs, and the things only you
+                can say. Read as one person, not a pile of apps. The record runs
+                for years, so your normal is really yours.
               </p>
             </Reveal>
             <Reveal delay={120} className="md:order-1">
-              <Streams />
+              <Streams goalChip={goal.chip} />
             </Reveal>
           </div>
         </section>

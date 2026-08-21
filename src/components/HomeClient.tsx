@@ -112,13 +112,14 @@ export default function HomeClient() {
             <p className="eyebrow">The record</p>
             <h2 className="headline h-sect mt-3">One continuous record of you</h2>
             <p className="lede mt-4 max-w-md">
-              Sleep, heart, training, movement. Four streams you already generate,
-              read as one person rather than four apps, drawn into a single thread
-              that runs through everything Jeani says to you.
+              Sleep, heart, training, movement, labs, and the things only you can
+              say. Every stream you already generate, read as one person rather
+              than a pile of apps, drawn into a single thread that ends in one
+              insight, in service of your goal.
             </p>
           </Reveal>
           <Reveal delay={120}>
-            <Streams />
+            <Streams goalChip={goal.chip} />
           </Reveal>
         </div>
       </section>
