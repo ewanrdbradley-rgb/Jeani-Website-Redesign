@@ -61,7 +61,7 @@ export default function StoryPage() {
         </div>
       </section>
 
-      {/* origin */}
+      {/* origin and team, one section */}
       <section className="shell py-20 md:py-28">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <Reveal>
@@ -75,63 +75,41 @@ export default function StoryPage() {
             </p>
             <p className="copy mt-5">
               The advice we got was built for the average athlete, and none of us
-              were the average athlete. Nobody is. We needed our bodies read in our
-              own terms, against our own normal, in service of our own goals. That
-              gap is Jeani.
+              were the average athlete. Nobody is. That gap is Jeani. Duke
+              decathletes with five national titles, four All-American honors and
+              multiple school records between us, and backgrounds across machine
+              learning, neuroscience, biology, physiology, public policy and
+              business.
             </p>
-          </Reveal>
-          <Reveal delay={120}>
-            <div className="relative">
-              <Photo
-                src="/photos/founders.jpg"
-                alt="The three Jeani founders laughing together in the Duke training facility"
-                className="aspect-[4/3] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.4)]"
-                sizes="(min-width: 768px) 50vw, 100vw"
+            <div className="mt-8 hidden items-end gap-3 md:flex">
+              <Image
+                src="/photos/hospital-1.jpg"
+                alt="A founder recovering in a hospital bed after injury"
+                width={288}
+                height={216}
+                className="w-40 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
               />
-              <div className="absolute -bottom-8 -left-6 hidden items-end gap-3 md:flex">
-                <Image
-                  src="/photos/hospital-1.jpg"
-                  alt="A founder recovering in a hospital bed after injury"
-                  width={288}
-                  height={216}
-                  className="w-36 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
-                />
-                <Image
-                  src="/photos/hospital-2.jpg"
-                  alt="A family member in a hospital bed, the cost of a lifetime of impact"
-                  width={216}
-                  height={288}
-                  className="w-28 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
-                />
-              </div>
+              <Image
+                src="/photos/hospital-2.jpg"
+                alt="A family member in a hospital bed, the cost of a lifetime of impact"
+                width={216}
+                height={288}
+                className="w-32 shadow-[0_20px_40px_-20px_rgba(16,34,120,0.45)]"
+              />
             </div>
           </Reveal>
-        </div>
-      </section>
-
-      {/* team */}
-      <section className="shell py-16 md:py-24">
-        <div className="grid items-end gap-10 md:grid-cols-2">
-          <Reveal>
-            <p className="eyebrow">The team</p>
-            <h2 className="headline h-sect mt-3">Three founders, one track</h2>
-            <p className="copy mt-5 max-w-xl">
-              Duke decathletes with five national titles, four All-American honors
-              and multiple school records between them. Backgrounds across machine
-              learning, neuroscience, biology, physiology, public policy and
-              business, with a shared love for movement.
-            </p>
-          </Reveal>
           <Reveal delay={120}>
-            <Photo
-              src="/photos/trio.jpg"
+            <Image
+              src="/photos/trio-cut.png"
               alt="Ewan Bradley, Michael Bennett and Stuart Bladon standing together in Duke blue"
-              className="aspect-[3/2] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.35)]"
-              sizes="(min-width: 768px) 50vw, 100vw"
+              width={1600}
+              height={1066}
+              className="h-auto w-full"
+              priority={false}
             />
           </Reveal>
         </div>
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
+        <div className="mt-14 grid gap-5 md:grid-cols-3">
           {TEAM.map((member, i) => (
             <Reveal key={member.name} delay={i * 120}>
               <a
