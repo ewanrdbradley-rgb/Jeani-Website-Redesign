@@ -38,7 +38,7 @@ export default function HomeClient() {
                 "your comeback",
                 "your trail ultra",
                 "moving well for life",
-                "triathlon season",
+                "pickleball, pain free",
               ]}
             />
           </h1>

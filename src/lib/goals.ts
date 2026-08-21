@@ -4,7 +4,7 @@ export type GoalId =
   | "life"
   | "first5k"
   | "ultra"
-  | "tri";
+  | "pickleball";
 
 export type Score = {
   label: string;
@@ -180,33 +180,33 @@ export const GOALS: Goal[] = [
     ],
   },
   {
-    id: "tri",
-    chip: "Triathlon season",
-    line: "Three sports, one body, one season to get it right.",
-    message: "The bike is carrying the load well",
-    checklistTitle: "Race week minus six",
+    id: "pickleball",
+    chip: "Pickleball, pain free",
+    line: "Three games a week, and knees that keep up.",
+    message: "Your knees liked the rest day",
+    checklistTitle: "This week on court",
     checklist: [
-      { text: "Swim technique session, done", done: true },
-      { text: "Long ride Saturday, done", done: true },
-      { text: "Brick run Sunday, keep it easy", done: false },
+      { text: "Two games, done", done: true },
+      { text: "Ten minutes of mobility, done", done: true },
+      { text: "Day off before Saturday's round robin", done: false },
     ],
     scores: [
       {
-        label: "Training balance",
-        value: 79,
-        normal: "your 30-day normal: 74",
-        points: [62, 65, 64, 68, 70, 69, 72, 74, 76, 79],
+        label: "Right knee",
+        value: 78,
+        normal: "your 30-day normal: 75",
+        points: [68, 70, 69, 72, 71, 74, 73, 75, 76, 78],
       },
       {
-        label: "Left knee",
-        value: 85,
-        normal: "your 30-day normal: 84",
-        points: [80, 81, 80, 82, 83, 82, 84, 83, 84, 85],
+        label: "Recovery",
+        value: 84,
+        normal: "your 30-day normal: 80",
+        points: [72, 74, 73, 76, 78, 77, 80, 81, 82, 84],
       },
     ],
     bubbles: [
-      "The long ride left your legs fresher than usual. The fitness is showing up where you want it.",
-      "Brick run tomorrow. Keep the first ten minutes easy and let your stride settle before you push.",
+      "Two games in two days and your right knee stayed inside its normal range. The mobility work is paying off.",
+      "Round robin Saturday. Take tomorrow off court and you will arrive with fresh legs.",
     ],
   },
 ];
