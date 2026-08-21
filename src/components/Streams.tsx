@@ -68,7 +68,7 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
         <g key={s.label}>
           <text
             x="0"
-            y={ys[i] - 12}
+            y={ys[i] + 6}
             fill={s.accent ? "#0068b5" : "#102278"}
             fillOpacity={s.accent ? 1 : 0.7}
             fontSize="17"
@@ -78,7 +78,7 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
             {s.label}
           </text>
           <path
-            d={`M 0 ${ys[i]} C 170 ${ys[i]}, 290 ${jy + (ys[i] - jy) * 0.25}, ${jx} ${jy}`}
+            d={`M 192 ${ys[i]} C 300 ${ys[i]}, 320 ${jy + (ys[i] - jy) * 0.2}, ${jx} ${jy}`}
             fill="none"
             stroke={s.accent ? "#0068b5" : "#102278"}
             strokeOpacity={s.accent ? 0.9 : 0.4}
@@ -93,9 +93,9 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
       {/* one record */}
       <circle cx={jx} cy={jy} r="4" fill="#102278" style={appear(950)} />
       <text
-        x={jx}
-        y={jy - 24}
-        textAnchor="middle"
+        x={jx + 12}
+        y={jy + 30}
+        textAnchor="start"
         fill="#102278"
         fillOpacity="0.7"
         fontSize="16"
