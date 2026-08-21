@@ -74,12 +74,10 @@ export default function StoryPage() {
               the data. Nobody was reading them.
             </p>
             <p className="copy mt-5">
-              The advice we got was built for the average athlete, and none of us
-              were the average athlete. Nobody is. That gap is Jeani. Duke
-              decathletes with five national titles, four All-American honors and
-              multiple school records between us, and backgrounds across machine
-              learning, neuroscience, biology, physiology, public policy and
-              business.
+              Duke decathletes with five national titles, four All-American honors
+              and multiple school records between us, and backgrounds across
+              machine learning, neuroscience, biology, physiology, public policy
+              and business.
             </p>
             <div className="mt-8 hidden items-end gap-3 md:flex">
               <Image
