@@ -39,14 +39,15 @@ body {
 /* headlines: Inter Black, tight tracking, oversized, sentence case */
 .headline {
   font-weight: 900;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.118em; /* brand titles: tracking -118 */
+  word-spacing: 0.118em; /* offset so tracking tightens letters, not the gaps between words */
   line-height: 1.0;
   color: #102278;
 }
 .h-hero { font-size: clamp(2.6rem, 5.2vw, 4.6rem); }
 .h-band { font-size: clamp(2.4rem, 5vw, 4.2rem); }
 .h-sect { font-size: clamp(1.9rem, 3.4vw, 3rem); }
-.h-sub  { font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -0.02em; }
+.h-sub  { font-size: clamp(1.35rem, 2vw, 1.8rem); }
 
 .lede {
   font-size: clamp(1.05rem, 1.4vw, 1.25rem);
