@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import ThreadLine from "@/components/ThreadLine";
 import Reveal from "@/components/Reveal";
 import ClosingCta from "@/components/ClosingCta";
@@ -53,9 +52,9 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Link href="#start" className="btn btn-ghost mt-8 w-full justify-center">
+            <a href="https://www.jeanihealth.com/waitlist" className="btn btn-ghost mt-8 w-full justify-center">
               Start your free trial
-            </Link>
+            </a>
           </div>
 
           <div className="rise-in card card-lift relative border-accent/40 p-8" style={{ animationDelay: "180ms" }}>
@@ -76,9 +75,9 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <Link href="#start" className="btn btn-accent mt-8 w-full justify-center">
+            <a href="https://www.jeanihealth.com/waitlist" className="btn btn-accent mt-8 w-full justify-center">
               Start your free trial
-            </Link>
+            </a>
           </div>
         </div>
       </section>
