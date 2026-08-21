@@ -61,8 +61,7 @@ export default function HomeClient() {
       {/* 2 · the goal */}
       <section className="shell py-20 md:py-28">
         <Reveal className="max-w-2xl">
-          <p className="eyebrow">The goal</p>
-          <h2 className="headline h-sect mt-3">It starts with your goal</h2>
+          <h2 className="headline h-sect">It starts with your goal</h2>
           <p className="lede mt-4">
             Tell Jeani what you are moving toward. Not a step count, a real goal, in
             your words.
@@ -103,8 +102,7 @@ export default function HomeClient() {
       <section className="shell py-20 md:py-28">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <Reveal>
-            <p className="eyebrow">The record</p>
-            <h2 className="headline h-sect mt-3">One continuous record of you</h2>
+            <h2 className="headline h-sect">One continuous record of you</h2>
             <p className="lede mt-4 max-w-md">
               Sleep, heart, training, movement, labs, and the things only you can
               say. Every stream you already generate, read as one person rather
@@ -129,8 +127,7 @@ export default function HomeClient() {
       {/* 4 · the dashboards, the centerpiece */}
       <section className="shell py-20 md:py-28">
         <Reveal className="max-w-2xl">
-          <p className="eyebrow">The dashboard</p>
-          <h2 className="headline h-sect mt-3">No two dashboards look the same</h2>
+          <h2 className="headline h-sect">No two dashboards look the same</h2>
           <p className="lede mt-4">
             The thread ends up here, inside your Today feed. Jeani rebuilds it around
             the goal and the body it belongs to. Six goals, six different mornings,
@@ -169,8 +166,7 @@ export default function HomeClient() {
       <section className="shell py-20 md:py-28">
         <div className="grid items-center gap-12 md:grid-cols-2">
           <Reveal>
-            <p className="eyebrow">The voice</p>
-            <h2 className="headline h-sect mt-3">It speaks when it's worth saying</h2>
+            <h2 className="headline h-sect">It speaks when it's worth saying</h2>
             <p className="lede mt-4 max-w-md">
               No streaks, no confetti, no noise. Jeani writes to you in the terms of
               the goal you set, and only when there is something worth acting on.
@@ -197,8 +193,7 @@ export default function HomeClient() {
       {/* 7 · proof */}
       <section className="shell py-20 md:py-28">
         <Reveal className="max-w-2xl">
-          <p className="eyebrow">The proof</p>
-          <h2 className="headline h-sect mt-3">Tested where movement is hardest</h2>
+          <h2 className="headline h-sect">Tested where movement is hardest</h2>
         </Reveal>
         <div className="mt-10 grid gap-4 md:grid-cols-3">
           <Reveal>
