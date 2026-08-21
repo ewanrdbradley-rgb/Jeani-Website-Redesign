@@ -1,4 +1,4 @@
-const INTEGRATIONS = ["Apple Watch", "Apple Health", "Oura", "Whoop", "Garmin, fall 2026"];
+const INTEGRATIONS = ["Apple Watch", "Apple Health", "Whoop", "Oura", "Fitbit", "Strava", "Withings", "Garmin, fall 2026"];
 
 export default function Chips() {
   return (
