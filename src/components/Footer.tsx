@@ -33,9 +33,25 @@ export default function Footer() {
           </div>
         </div>
         <div className="hair mt-12" />
-        <p className="mt-6 text-sm text-cobalt/50">
-          Staying active longer. Living without limits.
-        </p>
+        <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-cobalt/50">
+            Staying active longer. Living without limits.
+          </p>
+          <div className="flex items-center gap-6">
+            <a
+              href="https://www.jeanihealth.com/privacy"
+              className="text-sm text-cobalt/50 transition-colors hover:text-accent"
+            >
+              Privacy
+            </a>
+            <a
+              href="https://www.jeanihealth.com/terms"
+              className="text-sm text-cobalt/50 transition-colors hover:text-accent"
+            >
+              Terms
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
