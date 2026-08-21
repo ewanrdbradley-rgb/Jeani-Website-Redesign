@@ -101,7 +101,7 @@ export default function StoryPage() {
               src="/photos/trio-cut.png"
               alt="Ewan Bradley, Michael Bennett and Stuart Bladon standing together in Duke blue"
               width={1600}
-              height={1066}
+              height={1281}
               className="h-auto w-full"
               priority={false}
             />
