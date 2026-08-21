@@ -47,7 +47,7 @@ export default function StoryPage() {
           <Photo
             src="/photos/alpine.jpg"
             alt="Two trail runners moving along a rocky ridge beneath glaciated peaks"
-            className="h-[28rem] w-full md:h-[34rem]"
+            className="h-[18rem] w-full md:h-[22rem]"
             position="center 62%"
             priority
           />

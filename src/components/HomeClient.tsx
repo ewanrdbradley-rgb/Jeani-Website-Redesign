@@ -9,7 +9,7 @@ import CyclingWord from "./CyclingWord";
 import Photo from "./Photo";
 import ParallaxBand from "./ParallaxBand";
 import Streams from "./Streams";
-import PhoneMockup from "./PhoneMockup";
+import PhoneCarousel from "./PhoneCarousel";
 import ChatBubbles from "./ChatBubbles";
 import Chips from "./Chips";
 import CountUp from "./CountUp";
@@ -18,12 +18,6 @@ import ClosingCta from "./ClosingCta";
 export default function HomeClient() {
   const [selected, setSelected] = useState<GoalId>("marathon");
   const goal = GOALS.find((g) => g.id === selected) ?? GOALS[0];
-  const selectedIndex = GOALS.findIndex((g) => g.id === selected);
-  const phoneTrio = [
-    GOALS[(selectedIndex + GOALS.length - 1) % GOALS.length],
-    GOALS[selectedIndex],
-    GOALS[(selectedIndex + 1) % GOALS.length],
-  ];
 
   return (
     <ThreadLine>
@@ -160,17 +154,8 @@ export default function HomeClient() {
           ))}
         </div>
         <Reveal delay={100}>
-          <div className="mt-12 flex flex-wrap items-end justify-center gap-6 md:flex-nowrap">
-            {phoneTrio.map((g) => (
-              <button
-                key={g.id}
-                onClick={() => setSelected(g.id)}
-                aria-label={`Show the ${g.chip} dashboard`}
-                className="cursor-pointer"
-              >
-                <PhoneMockup goal={g} active={selected === g.id} animateFeed={selected === g.id} />
-              </button>
-            ))}
+          <div className="mt-12">
+            <PhoneCarousel selected={selected} onSelect={setSelected} />
           </div>
         </Reveal>
         <Reveal delay={160}>
