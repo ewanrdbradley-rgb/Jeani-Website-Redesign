@@ -1,0 +1,177 @@
+import type { Metadata } from "next";
+import Image from "next/image";
+import ThreadLine from "@/components/ThreadLine";
+import Reveal from "@/components/Reveal";
+import Photo from "@/components/Photo";
+import ClosingCta from "@/components/ClosingCta";
+
+export const metadata: Metadata = {
+  title: "Story",
+  description:
+    "Built from real experience by Duke decathlete founders whose careers were changed by injuries better prevention could have foreseen.",
+};
+
+const TEAM = [
+  { name: "Ewan Bradley", role: "Co-founder and CEO", initials: "EB", grad: "/grad-08.png" },
+  { name: "Michael Bennett", role: "Co-founder and COO", initials: "MB", grad: "/grad-10.png" },
+  { name: "Stuart Bladon", role: "Co-founder and CTO", initials: "SB", grad: "/grad-13.png" },
+];
+
+export default function StoryPage() {
+  return (
+    <ThreadLine>
+      {/* hero over a full-width photo, slow zoom on load */}
+      <section className="relative overflow-hidden">
+        <div className="slow-zoom">
+          <Photo
+            src="/photos/alpine.jpg"
+            alt="Two trail runners moving along a rocky ridge beneath glaciated peaks"
+            className="h-[28rem] w-full md:h-[34rem]"
+            position="center 62%"
+            priority
+          />
+        </div>
+        <div className="absolute inset-0 flex items-end">
+          <div className="shell pb-12 md:pb-16">
+            <h1 className="rise-in headline h-hero max-w-3xl rounded-3xl bg-bone/85 p-7 backdrop-blur-sm md:p-10">
+              Built from real experience
+            </h1>
+          </div>
+        </div>
+      </section>
+
+      {/* origin */}
+      <section className="shell py-20 md:py-28">
+        <div className="grid items-center gap-12 md:grid-cols-2">
+          <Reveal>
+            <p className="eyebrow">The origin</p>
+            <h2 className="headline h-sect mt-3">Fifteen years inside elite sport</h2>
+            <p className="copy mt-6">
+              For the best part of fifteen years we lived the cost of injury. All
+              three of our careers were disrupted, and in moments ended, by injuries
+              that better prevention could have foreseen. The warning signs were in
+              the data. Nobody was reading them.
+            </p>
+            <p className="copy mt-5">
+              The advice we got was built for the average athlete, and none of us
+              were the average athlete. Nobody is. We needed our bodies read in our
+              own terms, against our own normal, in service of our own goals. That
+              gap is Jeani.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <div className="relative">
+              <Photo
+                src="/photos/founders.jpg"
+                alt="The three Jeani founders laughing together in the Duke training facility"
+                className="aspect-[4/3] rounded-[1.75rem] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.4)]"
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
+              <div className="card absolute -bottom-6 -left-4 hidden w-36 rotate-[-2deg] overflow-hidden md:block">
+                <Image
+                  src="/photos/vintage.jpg"
+                  alt="An archival race photo from the founders' families' running past"
+                  width={288}
+                  height={369}
+                  className="w-full"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* team */}
+      <section className="shell py-16 md:py-24">
+        <div className="grid items-end gap-10 md:grid-cols-2">
+          <Reveal>
+            <p className="eyebrow">The team</p>
+            <h2 className="headline h-sect mt-3">Three founders, one track</h2>
+            <p className="copy mt-5 max-w-xl">
+              Duke decathletes with five national titles, four All-American honors
+              and multiple school records between them. Backgrounds across machine
+              learning, neuroscience, biology, physiology, public policy and
+              business, with a shared love for movement.
+            </p>
+          </Reveal>
+          <Reveal delay={120}>
+            <Photo
+              src="/photos/trio.jpg"
+              alt="Ewan Bradley, Michael Bennett and Stuart Bladon standing together in Duke blue"
+              className="aspect-[3/2] rounded-[1.75rem] shadow-[0_32px_64px_-32px_rgba(16,34,120,0.35)]"
+              sizes="(min-width: 768px) 50vw, 100vw"
+            />
+          </Reveal>
+        </div>
+        <div className="mt-10 grid gap-5 md:grid-cols-3">
+          {TEAM.map((member, i) => (
+            <Reveal key={member.name} delay={i * 120}>
+              <div className="card card-lift overflow-hidden">
+                <div
+                  className="relative flex aspect-[16/7] items-end p-5"
+                  data-photo={`real photo: portrait of ${member.name}, natural light`}
+                >
+                  <Image
+                    src={member.grad}
+                    alt=""
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    className="object-cover"
+                  />
+                  <span
+                    aria-hidden="true"
+                    className="absolute inset-0"
+                    style={{ background: "linear-gradient(180deg, rgba(16,34,120,0) 30%, rgba(16,34,120,0.55) 100%)" }}
+                  />
+                  <span className="relative text-4xl font-black tracking-tight text-bone">
+                    {member.initials}
+                  </span>
+                </div>
+                <div className="p-5">
+                  <p className="text-lg font-black tracking-tight text-cobalt">{member.name}</p>
+                  <p className="copy mt-0.5 text-[0.9375rem]">{member.role}</p>
+                </div>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* belief */}
+      <section className="shell py-20 md:py-28">
+        <Reveal className="max-w-3xl">
+          <h2 className="headline h-band">Movement is for everyone.</h2>
+          <p className="lede mt-6 max-w-xl">
+            We believe the body you move with should be measured, understood and
+            spoken to before it fails. In your terms, not the average person's.
+          </p>
+        </Reveal>
+      </section>
+
+      {/* vision band */}
+      <section className="relative">
+        <Photo
+          src="/photos/grass.jpg"
+          alt="A person standing still on a windswept grass hill under a wide blue sky"
+          className="h-[26rem] w-full md:h-[32rem]"
+          position="center 55%"
+        />
+        <div className="absolute inset-0 flex items-center">
+          <div className="shell">
+            <Reveal>
+              <h2 className="headline h-band max-w-3xl rounded-3xl bg-bone/85 p-8 backdrop-blur-sm md:p-12">
+                The next frontier of health isn't just living longer. It's staying
+                active longer.
+              </h2>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <ClosingCta
+        headline="Keep moving with us."
+        sub="Two weeks free, in your terms from the first morning."
+      />
+    </ThreadLine>
+  );
+}

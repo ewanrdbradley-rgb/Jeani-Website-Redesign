@@ -1,0 +1,173 @@
+@import "tailwindcss";
+
+/* Jeani brand system. Bone ground, cobalt voice, one bright accent. */
+@theme {
+  --color-bone: #eeebe4;
+  --color-cobalt: #102278;
+  --color-accent: #0068b5;
+  --color-card: #ffffff;
+  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eeebe4;
+  color: #102278;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(0, 104, 181, 0.18);
+}
+
+/* shell */
+.shell {
+  width: 100%;
+  max-width: 1180px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 72px);
+}
+
+/* headlines: Inter Black, tight tracking, oversized, sentence case */
+.headline {
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.0;
+  color: #102278;
+}
+.h-hero { font-size: clamp(2.6rem, 5.2vw, 4.6rem); }
+.h-band { font-size: clamp(2.4rem, 5vw, 4.2rem); }
+.h-sect { font-size: clamp(1.9rem, 3.4vw, 3rem); }
+.h-sub  { font-size: clamp(1.35rem, 2vw, 1.8rem); letter-spacing: -0.02em; }
+
+.lede {
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.65;
+  color: rgba(16, 34, 120, 0.78);
+}
+.copy {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: rgba(16, 34, 120, 0.78);
+}
+.eyebrow {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #0068b5;
+}
+.small-note {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: rgba(16, 34, 120, 0.62);
+}
+
+/* white cards with soft shadows */
+.card {
+  background: #ffffff;
+  border-radius: 1.25rem;
+  border: 1px solid rgba(16, 34, 120, 0.06);
+  box-shadow: 0 20px 44px -28px rgba(16, 34, 120, 0.28);
+}
+.card-lift {
+  transition: transform 400ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 400ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 28px 56px -28px rgba(16, 34, 120, 0.36);
+}
+
+.hair { height: 1px; background: rgba(16, 34, 120, 0.12); }
+
+/* actions */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  padding: 0.8rem 1.6rem;
+  font-weight: 600;
+  font-size: 0.9875rem;
+  transition: transform 320ms ease-out, box-shadow 320ms ease-out, background-color 320ms ease-out, border-color 320ms ease-out;
+}
+.btn-accent { background: #0068b5; color: #ffffff; }
+.btn-accent:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(0, 104, 181, 0.5); }
+.btn-cobalt { background: #102278; color: #ffffff; }
+.btn-cobalt:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -12px rgba(16, 34, 120, 0.5); }
+.btn-ghost { border: 1px solid rgba(16, 34, 120, 0.22); color: #102278; }
+.btn-ghost:hover { border-color: rgba(16, 34, 120, 0.5); transform: translateY(-2px); }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(16, 34, 120, 0.18);
+  padding: 0.45rem 0.95rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(16, 34, 120, 0.85);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* reveal on scroll: fades only, ease-out */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 460ms ease-out, transform 460ms ease-out;
+}
+.reveal.is-in { opacity: 1; transform: none; }
+
+/* feed items cross-fade one by one when a goal is chosen */
+@keyframes feed-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: none; }
+}
+.feed-item { animation: feed-in 420ms ease-out both; }
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in { animation: fade-in 420ms ease-out both; }
+
+@keyframes rise-in {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: none; }
+}
+.rise-in { animation: rise-in 480ms ease-out both; }
+
+/* story hero: slow zoom on load, once */
+@keyframes slow-zoom {
+  from { transform: scale(1.06); }
+  to { transform: scale(1); }
+}
+.slow-zoom { animation: slow-zoom 9s ease-out both; }
+
+/* pricing annual tag: one subtle pulse */
+@keyframes pulse-once {
+  0% { transform: scale(1); }
+  45% { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+.pulse-once { animation: pulse-once 900ms ease-out 700ms 1 both; }
+
+/* hero cycling words */
+.cycle-word { display: inline-block; }
+.cycle-word.entering { animation: fade-in 500ms ease-out both; }
+.cycle-word.leaving { opacity: 0; transition: opacity 400ms ease-out; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .feed-item, .fade-in, .rise-in, .slow-zoom, .pulse-once { animation: none; }
+  * { transition-duration: 0.01ms !important; }
+}
