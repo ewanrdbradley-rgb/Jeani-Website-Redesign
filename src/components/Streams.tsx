@@ -42,9 +42,9 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
   }, []);
 
   const ease = "cubic-bezier(0.22, 1, 0.36, 1)";
-  const ys = STREAMS.map((_, i) => 30 + i * 40);
+  const ys = STREAMS.map((_, i) => 34 + i * 46);
   const jx = 400; // where the streams become one record
-  const jy = 150;
+  const jy = 172;
   const ex = 700; // where the record becomes one insight
   const draw = (delay: number, dur = 1500) => ({
     strokeDasharray: 1,
@@ -59,7 +59,7 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
   return (
     <svg
       ref={ref}
-      viewBox="0 0 720 300"
+      viewBox="0 0 720 350"
       className="w-full"
       role="img"
       aria-label="Sleep, heart, training, movement, labs and what you tell Jeani draw together into one record, and the record becomes one insight for your goal"
@@ -68,11 +68,11 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
         <g key={s.label}>
           <text
             x="0"
-            y={ys[i] - 9}
+            y={ys[i] - 12}
             fill={s.accent ? "#0068b5" : "#102278"}
-            fillOpacity={s.accent ? 1 : 0.65}
-            fontSize="14"
-            fontWeight="600"
+            fillOpacity={s.accent ? 1 : 0.7}
+            fontSize="17"
+            fontWeight={s.accent ? "800" : "600"}
             style={appear(i * 110)}
           >
             {s.label}
@@ -82,7 +82,7 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
             fill="none"
             stroke={s.accent ? "#0068b5" : "#102278"}
             strokeOpacity={s.accent ? 0.9 : 0.4}
-            strokeWidth="1.5"
+            strokeWidth={s.accent ? "2.2" : "1.5"}
             vectorEffect="non-scaling-stroke"
             pathLength={1}
             style={draw(i * 110)}
@@ -94,11 +94,11 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
       <circle cx={jx} cy={jy} r="4" fill="#102278" style={appear(950)} />
       <text
         x={jx}
-        y={jy - 22}
+        y={jy - 24}
         textAnchor="middle"
         fill="#102278"
-        fillOpacity="0.65"
-        fontSize="14"
+        fillOpacity="0.7"
+        fontSize="16"
         fontWeight="600"
         style={appear(1000)}
       >
@@ -119,11 +119,11 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
       <g key={goalChip ?? "static"} className="fade-in">
         <text
           x={ex}
-          y={jy - 38}
+          y={jy - 46}
           textAnchor="end"
           fill="#0068b5"
-          fontSize="15"
-          fontWeight="700"
+          fontSize="18"
+          fontWeight="800"
           style={appear(1950)}
         >
           One insight, just for you
@@ -131,11 +131,11 @@ export default function Streams({ goalChip }: { goalChip?: string }) {
         {goalChip && (
           <text
             x={ex}
-            y={jy - 18}
+            y={jy - 22}
             textAnchor="end"
             fill="#102278"
-            fillOpacity="0.65"
-            fontSize="13"
+            fillOpacity="0.7"
+            fontSize="15"
             fontWeight="600"
             style={appear(2050)}
           >
