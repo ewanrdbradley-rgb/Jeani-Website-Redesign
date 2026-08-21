@@ -82,10 +82,10 @@ export default function SciencePage() {
       </section>
 
       <Photo
-        src="/photos/field.jpg"
-        alt="A lone runner on a road through open green fields, seen from above"
+        src="/photos/court.jpg"
+        alt="A player mid-stride on a blue court, caught in natural motion blur"
         className="h-52 w-full md:h-72"
-        position="center 68%"
+        position="center 37%"
       />
 
       {/* thorpe */}
@@ -122,7 +122,7 @@ export default function SciencePage() {
           src="/photos/boardwalk.jpg"
           alt="Three athletes accelerating across a boardwalk under a deep blue sky"
           className="h-[26rem] w-full md:h-[30rem]"
-          position="center 30%"
+          position="center 37%"
         />
         <div className="absolute inset-0 flex items-center">
           <div className="shell">

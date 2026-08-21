@@ -126,10 +126,10 @@ export default function HomeClient() {
 
       {/* breather */}
       <Photo
-        src="/photos/field.jpg"
-        alt="A lone runner on a road through open green fields, seen from above"
+        src="/photos/court.jpg"
+        alt="A player mid-stride on a blue court, caught in natural motion blur"
         className="h-52 w-full md:h-72"
-        position="center 62%"
+        position="center 37%"
       />
 
       {/* 4 · the dashboards, the centerpiece */}
