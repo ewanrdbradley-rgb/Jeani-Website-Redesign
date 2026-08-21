@@ -110,10 +110,10 @@ export default function ProductClient() {
         </section>
 
         <Photo
-          src="/photos/street.jpg"
-          alt="A group running through city streets at golden hour"
+          src="/photos/court-2.jpg"
+          alt="An athlete low and ready on a blue court, paddle in hand, caught in motion blur"
           className="h-52 w-full md:h-72"
-          position="center 62%"
+          position="center 54%"
         />
 
         {/* c · dashboard rebuilds */}
