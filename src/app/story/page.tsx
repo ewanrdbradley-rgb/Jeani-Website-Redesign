@@ -12,9 +12,30 @@ export const metadata: Metadata = {
 };
 
 const TEAM = [
-  { name: "Ewan Bradley", role: "Co-founder and CEO", initials: "EB", grad: "/grad-08.png" },
-  { name: "Michael Bennett", role: "Co-founder and COO", initials: "MB", grad: "/grad-10.png" },
-  { name: "Stuart Bladon", role: "Co-founder and CTO", initials: "SB", grad: "/grad-13.png" },
+  {
+    name: "Ewan Bradley",
+    role: "Co-founder and CEO",
+    img: "/photos/ewan.jpg",
+    position: "center 30%",
+    href: "https://www.linkedin.com/in/ewanrdbradley/",
+    linkLabel: "linkedin.com/in/ewanrdbradley",
+  },
+  {
+    name: "Michael Bennett",
+    role: "Co-founder and COO",
+    img: "/photos/michael.jpg",
+    position: "center 15%",
+    href: "https://www.linkedin.com/in/michael-bennett-052376210/",
+    linkLabel: "linkedin.com/in/michael-bennett",
+  },
+  {
+    name: "Stuart Bladon",
+    role: "Co-founder and CTO",
+    img: "/photos/stuart.jpg",
+    position: "center 20%",
+    href: "https://www.5tu.art",
+    linkLabel: "5tu.art",
+  },
 ];
 
 export default function StoryPage() {
@@ -106,32 +127,28 @@ export default function StoryPage() {
         <div className="mt-10 grid gap-5 md:grid-cols-3">
           {TEAM.map((member, i) => (
             <Reveal key={member.name} delay={i * 120}>
-              <div className="card card-lift overflow-hidden">
-                <div
-                  className="relative flex aspect-[16/7] items-end p-5"
-                  data-photo={`real photo: portrait of ${member.name}, natural light`}
-                >
+              <a
+                href={member.href}
+                target="_blank"
+                rel="noreferrer"
+                className="card card-lift block overflow-hidden"
+              >
+                <div className="relative aspect-[4/5]">
                   <Image
-                    src={member.grad}
-                    alt=""
+                    src={member.img}
+                    alt={`${member.name}, ${member.role}`}
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                     className="object-cover"
+                    style={{ objectPosition: member.position }}
                   />
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-0"
-                    style={{ background: "linear-gradient(180deg, rgba(16,34,120,0) 30%, rgba(16,34,120,0.55) 100%)" }}
-                  />
-                  <span className="relative text-4xl font-black tracking-tight text-bone">
-                    {member.initials}
-                  </span>
                 </div>
                 <div className="p-5">
                   <p className="text-lg font-black tracking-tight text-cobalt">{member.name}</p>
                   <p className="copy mt-0.5 text-[0.9375rem]">{member.role}</p>
+                  <p className="mt-2 text-sm font-medium text-accent">{member.linkLabel}</p>
                 </div>
-              </div>
+              </a>
             </Reveal>
           ))}
         </div>
