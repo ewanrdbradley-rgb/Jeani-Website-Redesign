@@ -2,7 +2,7 @@
 
 /* Jeani brand system. Bone ground, cobalt voice, one bright accent. */
 @theme {
-  --color-bone: #eeebe4;
+  --color-bone: #f9f6ef;
   --color-cobalt: #102278;
   --color-accent: #0068b5;
   --color-card: #ffffff;
@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  background: #eeebe4;
+  background: #f9f6ef;
   color: #102278;
   font-family: var(--font-inter), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -83,7 +83,7 @@ export default function ParallaxBand({
             ref={pathRef}
             d={threadPath}
             fill="none"
-            stroke="#eeebe4"
+            stroke="#f9f6ef"
             strokeOpacity="0.75"
             strokeWidth="1.5"
             vectorEffect="non-scaling-stroke"
