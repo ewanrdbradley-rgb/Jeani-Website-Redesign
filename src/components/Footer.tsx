@@ -19,10 +19,10 @@ export default function Footer() {
             </p>
           </div>
           <nav aria-label="Footer" className="flex flex-col gap-2.5">
-            <Link href="/product" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">Product</Link>
-            <Link href="/science" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">Science</Link>
-            <Link href="/story" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">Story</Link>
-            <Link href="/pricing" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">Pricing</Link>
+            <Link href="/product" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">The App</Link>
+            <Link href="/science" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">The Model</Link>
+            <Link href="/story" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">The Founders</Link>
+            <Link href="/pricing" className="text-[0.9375rem] font-medium text-cobalt/80 transition-colors hover:text-accent">Membership</Link>
           </nav>
           <div className="flex flex-col gap-2.5 text-[0.9375rem] text-cobalt/70">
             <a href="mailto:ewan@jeanihealth.com" className="transition-colors hover:text-accent">

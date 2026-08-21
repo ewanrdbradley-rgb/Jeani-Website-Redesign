@@ -6,10 +6,10 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const LINKS = [
-  { href: "/product", label: "Product" },
-  { href: "/science", label: "Science" },
-  { href: "/story", label: "Story" },
-  { href: "/pricing", label: "Pricing" },
+  { href: "/product", label: "The App" },
+  { href: "/science", label: "The Model" },
+  { href: "/story", label: "The Founders" },
+  { href: "/pricing", label: "Membership" },
 ];
 
 export default function Nav() {
