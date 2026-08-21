@@ -176,9 +176,7 @@ export default function HomeClient() {
               the goal you set, and only when there is something worth acting on.
             </p>
           </Reveal>
-          <Reveal delay={120}>
-            <ChatBubbles goal={goal} />
-          </Reveal>
+          <ChatBubbles goal={goal} />
         </div>
       </section>
 

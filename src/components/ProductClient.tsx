@@ -151,9 +151,9 @@ export default function ProductClient() {
                 to the right professional in time to act.
               </p>
             </Reveal>
-            <Reveal delay={120} className="md:order-1">
+            <div className="md:order-1">
               <ChatBubbles goal={goal} />
-            </Reveal>
+            </div>
           </div>
         </section>
 
