@@ -28,7 +28,9 @@ export default function Footer() {
             <a href="mailto:ewan@jeanihealth.com" className="transition-colors hover:text-accent">
               ewan@jeanihealth.com
             </a>
-            <span>@jeanihealth</span>
+            <a href="https://www.instagram.com/jeanihealth/" target="_blank" rel="noreferrer" className="transition-colors hover:text-accent">
+              @jeanihealth
+            </a>
             <span>jeanihealth.com</span>
           </div>
         </div>

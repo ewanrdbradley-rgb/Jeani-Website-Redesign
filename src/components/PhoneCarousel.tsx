@@ -7,10 +7,15 @@ import { GOALS, type GoalId } from "@/lib/goals";
 const CARD = 248;
 const GAP = 28;
 const EASE = "cubic-bezier(0.22, 1, 0.36, 1)";
+const N = GOALS.length;
+
+const mod = (n: number, m: number) => ((n % m) + m) % m;
 
 /*
- * the six dashboards as a carousel: the chosen goal holds the center,
- * the others wait either side. swipe, drag or tap to move between them.
+ * the six dashboards as an endless loop: the chosen goal always holds
+ * the center with neighbors either side, and the track wraps around.
+ * three copies render; the middle one is home, and after each glide
+ * the track silently rebases so the loop never runs out of road.
  */
 export default function PhoneCarousel({
   selected,
@@ -20,27 +25,48 @@ export default function PhoneCarousel({
   onSelect: (id: GoalId) => void;
 }) {
   const wrapRef = useRef<HTMLDivElement>(null);
-  const [center, setCenter] = useState(0);
+  const [wrapW, setWrapW] = useState(0);
+  const [vi, setVi] = useState(N + Math.max(0, GOALS.findIndex((g) => g.id === selected)));
+  const [instant, setInstant] = useState(false);
   const [dragDx, setDragDx] = useState(0);
   const dragging = useRef(false);
   const moved = useRef(false);
   const startX = useRef(0);
-  const index = Math.max(0, GOALS.findIndex((g) => g.id === selected));
 
-  const recalc = useCallback(() => {
-    const w = wrapRef.current?.clientWidth ?? 0;
-    setCenter(w / 2 - (index * (CARD + GAP) + CARD / 2));
-  }, [index]);
-
+  const measure = useCallback(() => {
+    setWrapW(wrapRef.current?.clientWidth ?? 0);
+  }, []);
   useEffect(() => {
-    recalc();
-    window.addEventListener("resize", recalc);
-    return () => window.removeEventListener("resize", recalc);
-  }, [recalc]);
+    measure();
+    window.addEventListener("resize", measure);
+    return () => window.removeEventListener("resize", measure);
+  }, [measure]);
 
-  const step = (dir: number) => {
-    const next = Math.min(GOALS.length - 1, Math.max(0, index + dir));
-    if (next !== index) onSelect(GOALS[next].id);
+  // an outside selection (chips) glides in via the shortest path around the loop
+  useEffect(() => {
+    const gi = GOALS.findIndex((g) => g.id === selected);
+    if (gi < 0 || mod(vi, N) === gi) return;
+    const base = Math.floor(vi / N) * N;
+    const candidates = [base - N + gi, base + gi, base + N + gi];
+    const target = candidates.reduce((a, b) => (Math.abs(b - vi) < Math.abs(a - vi) ? b : a));
+    setVi(target);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selected]);
+
+  // rebase into the middle copy once the glide settles
+  useEffect(() => {
+    if (vi >= N && vi < 2 * N) return;
+    const t = setTimeout(() => {
+      setInstant(true);
+      setVi((v) => N + mod(v, N));
+      requestAnimationFrame(() => requestAnimationFrame(() => setInstant(false)));
+    }, 720);
+    return () => clearTimeout(t);
+  }, [vi]);
+
+  const go = (target: number) => {
+    setVi(target);
+    onSelect(GOALS[mod(target, N)].id);
   };
 
   const onPointerDown = (e: React.PointerEvent) => {
@@ -59,9 +85,12 @@ export default function PhoneCarousel({
     dragging.current = false;
     const dx = e.clientX - startX.current;
     setDragDx(0);
-    if (dx < -48) step(1);
-    else if (dx > 48) step(-1);
+    if (dx < -48) go(vi + 1);
+    else if (dx > 48) go(vi - 1);
   };
+
+  const offset = wrapW / 2 - (vi * (CARD + GAP) + CARD / 2);
+  const items = [...GOALS, ...GOALS, ...GOALS];
 
   return (
     <div
@@ -81,27 +110,28 @@ export default function PhoneCarousel({
         className="flex w-max items-end"
         style={{
           gap: GAP,
-          transform: `translate3d(${center + dragDx}px, 0, 0)`,
-          transition: dragging.current ? "none" : `transform 700ms ${EASE}`,
+          transform: `translate3d(${offset + dragDx}px, 0, 0)`,
+          transition: dragging.current || instant ? "none" : `transform 700ms ${EASE}`,
         }}
       >
-        {GOALS.map((g, i) => {
-          const d = Math.abs(i - index);
+        {items.map((g, i) => {
+          const d = Math.abs(i - vi);
           return (
             <button
-              key={g.id}
+              key={`${Math.floor(i / N)}-${g.id}`}
               onClick={() => {
-                if (!moved.current) onSelect(g.id);
+                if (!moved.current) go(i);
               }}
+              tabIndex={d === 0 ? 0 : -1}
               aria-label={`Show the ${g.chip} dashboard`}
-              aria-current={i === index}
+              aria-current={d === 0}
               className="shrink-0"
               style={{
                 opacity: d === 0 ? 1 : d === 1 ? 0.7 : 0.4,
-                transition: `opacity 700ms ${EASE}`,
+                transition: dragging.current || instant ? "none" : `opacity 700ms ${EASE}`,
               }}
             >
-              <PhoneMockup goal={g} active={i === index} animateFeed={i === index} />
+              <PhoneMockup goal={g} active={d === 0} animateFeed={d === 0} />
             </button>
           );
         })}
