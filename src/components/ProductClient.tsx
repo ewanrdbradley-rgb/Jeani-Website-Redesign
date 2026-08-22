@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { GOALS, type GoalId } from "@/lib/goals";
 import ThreadLine from "./ThreadLine";
@@ -66,11 +67,20 @@ export default function ProductClient() {
               Pick a goal above and watch every screen on this page rebuild around
               it. That is the product.
             </p>
-            <p className="small-note mt-5 max-w-md">
-              <span className="font-semibold text-cobalt/85">Wear your Apple Watch.</span>{" "}
-              Jeani reads it and texts you when it matters. Nothing new to buy,
-              nothing new to charge.
-            </p>
+            <div className="mt-5 flex max-w-md items-start gap-3">
+              <Image
+                src="/apple-watch-mark.png"
+                alt="Apple Watch"
+                width={96}
+                height={32}
+                className="mt-0.5 h-4 w-auto opacity-80"
+              />
+              <p className="small-note">
+                <span className="font-semibold text-cobalt/85">Wear your Apple Watch.</span>{" "}
+                Jeani reads it and texts you when it matters. Nothing new to buy,
+                nothing new to charge.
+              </p>
+            </div>
           </Reveal>
         </section>
 
