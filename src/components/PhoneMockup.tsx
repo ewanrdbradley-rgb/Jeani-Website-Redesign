@@ -16,13 +16,13 @@ export default function PhoneMockup({
 }) {
   return (
     <div
-      className={`w-[248px] shrink-0 rounded-[2.2rem] border bg-white p-2.5 transition-all duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
+      className={`h-[537px] w-[248px] shrink-0 rounded-[2.2rem] border bg-white p-2.5 transition-all duration-700 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
         active
           ? "z-10 -translate-y-2 scale-[1.03] border-cobalt/10 shadow-[0_36px_70px_-30px_rgba(16,34,120,0.45)]"
           : "scale-[0.97] border-cobalt/8 opacity-70 shadow-[0_24px_50px_-30px_rgba(16,34,120,0.3)]"
       }`}
     >
-      <div className="rounded-[1.75rem] bg-bone/70 px-3 pb-4 pt-3">
+      <div className="relative h-full overflow-hidden rounded-[1.75rem] bg-bone/70 px-3 pb-4 pt-3">
         <div className="mx-auto mb-3 h-1.5 w-16 rounded-full bg-cobalt/15" />
         <div key={animateFeed ? goal.id : "static"} className="flex flex-col gap-2.5">
           <div className="feed-item flex items-baseline justify-between px-1" style={{ animationDelay: "0ms" }}>
@@ -66,6 +66,11 @@ export default function PhoneMockup({
             </div>
           ))}
         </div>
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-10 rounded-b-[1.75rem]"
+          style={{ background: "linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,0.9))" }}
+        />
       </div>
     </div>
   );
