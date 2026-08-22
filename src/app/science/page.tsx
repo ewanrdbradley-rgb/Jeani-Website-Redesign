@@ -41,6 +41,9 @@ export default function SciencePage() {
             Joint load, asymmetry, movement quality. Measured in your terms, not the
             average person's.
           </p>
+          <a href="/thorpe1.5" className="btn btn-ghost mt-8 !px-5 !py-2.5 text-sm">
+            Read about the model
+          </a>
         </Reveal>
       </section>
 
