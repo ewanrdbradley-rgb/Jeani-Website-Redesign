@@ -46,6 +46,10 @@ export default function HomeClient() {
               See how it works
             </Link>
           </div>
+          <p className="small-note mt-6 max-w-sm">
+            <span className="font-semibold text-cobalt/85">Live on Apple Watch today.</span>{" "}
+            Jeani reads the watch you already wear and texts you when it matters.
+          </p>
         </div>
         <Reveal delay={120}>
           <Photo
@@ -105,7 +109,7 @@ export default function HomeClient() {
             <h2 className="headline h-sect">One continuous record of you</h2>
             <p className="lede mt-4 max-w-md">
               Sleep, heart, training, movement, labs, and the things only you can
-              say. Every stream you already generate, read as one person rather
+              say. Every stream your Apple Watch already generates, read as one person rather
               than a pile of apps, drawn into a single thread that ends in one
               insight, in service of your goal.
             </p>

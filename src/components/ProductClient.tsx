@@ -66,6 +66,11 @@ export default function ProductClient() {
               Pick a goal above and watch every screen on this page rebuild around
               it. That is the product.
             </p>
+            <p className="small-note mt-5 max-w-md">
+              <span className="font-semibold text-cobalt/85">Wear your Apple Watch.</span>{" "}
+              Jeani reads it and texts you when it matters. Nothing new to buy,
+              nothing new to charge.
+            </p>
           </Reveal>
         </section>
 
@@ -99,7 +104,8 @@ export default function ProductClient() {
               <h2 className="headline h-sect mt-3">One continuous record</h2>
               <p className="lede mt-4 max-w-md">
                 Sleep, heart, training, movement, labs, and the things only you
-                can say. Read as one person, not a pile of apps. The record runs
+                can say, read from your Apple Watch and Apple Health. One person,
+                not a pile of apps. The record runs
                 for years, so your normal is really yours.
               </p>
             </Reveal>
