@@ -102,6 +102,9 @@ export default function SciencePage() {
               score compares you to your own rolling normal. The longer it runs,
               the truer it reads, for you and for everyone who trains like you.
             </p>
+            <a href="/thorpe1.5" className="btn btn-ghost mt-7 !px-5 !py-2.5 text-sm">
+              Read about the model
+            </a>
           </Reveal>
           <Reveal delay={120}>
             <div className="card p-10 text-center">
