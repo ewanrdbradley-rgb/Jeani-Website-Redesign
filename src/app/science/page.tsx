@@ -42,7 +42,7 @@ export default function SciencePage() {
             average person's.
           </p>
           <a href="/thorpe1.5" className="btn btn-ghost mt-8 !px-5 !py-2.5 text-sm">
-            Read about the model
+            Read about Thorpe
           </a>
         </Reveal>
       </section>
@@ -106,7 +106,7 @@ export default function SciencePage() {
               the truer it reads, for you and for everyone who trains like you.
             </p>
             <a href="/thorpe1.5" className="btn btn-ghost mt-7 !px-5 !py-2.5 text-sm">
-              Read about the model
+              Read about Thorpe
             </a>
           </Reveal>
           <Reveal delay={120}>
