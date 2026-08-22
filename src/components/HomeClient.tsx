@@ -170,7 +170,8 @@ export default function HomeClient() {
             <p className="lede mt-4 max-w-md">
               No streaks, no confetti, no noise. Jeani writes to you in the terms of
               the goal you set, and only when there is something worth acting on.
-              Pick a moment and watch how the conversation goes.
+              It all arrives as texts, straight to your number, with no new app to
+              open. Pick a moment and watch how the conversation goes.
             </p>
           </Reveal>
           <Reveal delay={100}>

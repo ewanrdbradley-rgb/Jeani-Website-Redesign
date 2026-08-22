@@ -115,7 +115,7 @@ export default function VoiceDemo() {
           </span>
           <div>
             <p className="text-[0.9375rem] font-bold text-cobalt">Jeani</p>
-            <p className="text-xs text-cobalt/55">Always reading. Speaks rarely.</p>
+            <p className="text-xs text-cobalt/55">Texts straight to your number</p>
           </div>
         </div>
         <div key={scenario.id} className="flex min-h-[16rem] flex-col justify-end gap-2.5 bg-bone/60 px-4 py-5">
