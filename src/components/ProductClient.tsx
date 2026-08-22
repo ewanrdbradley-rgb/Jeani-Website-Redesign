@@ -76,7 +76,7 @@ export default function ProductClient() {
                 className="mt-0.5 h-4 w-auto opacity-80"
               />
               <p className="small-note">
-                <span className="font-semibold text-cobalt/85">Wear your Apple Watch.</span>{" "}
+                <span className="font-semibold text-cobalt/85">Compatible with your device.</span>{" "}
                 Jeani reads it and texts you when it matters. Nothing new to buy,
                 nothing new to charge.
               </p>

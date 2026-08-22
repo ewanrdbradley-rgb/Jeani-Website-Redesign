@@ -56,7 +56,7 @@ export default function HomeClient() {
               className="mt-0.5 h-4 w-auto opacity-80"
             />
             <p className="small-note">
-              <span className="font-semibold text-cobalt/85">Live on Apple Watch today.</span>{" "}
+              <span className="font-semibold text-cobalt/85">Compatible with your device.</span>{" "}
               Jeani reads the watch you already wear and texts you when it matters.
             </p>
           </div>
