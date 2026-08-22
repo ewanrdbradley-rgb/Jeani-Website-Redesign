@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ThreadLine from "@/components/ThreadLine";
 import Reveal from "@/components/Reveal";
+import LogoMarquee from "@/components/LogoMarquee";
 import ClosingCta from "@/components/ClosingCta";
 
 export const metadata: Metadata = {
@@ -80,6 +81,15 @@ export default function PricingPage() {
             </a>
           </div>
         </div>
+      </section>
+
+      <section className="pb-14">
+        <Reveal>
+          <p className="small-note mb-6 text-center">
+            The teams, clubs and partners we build alongside.
+          </p>
+          <LogoMarquee />
+        </Reveal>
       </section>
 
       <section className="shell pb-8">

@@ -185,9 +185,15 @@ body {
 .cycle-word.is-current { opacity: 1; transform: none; }
 .cycle-word.is-prev { opacity: 0; transform: translateY(-0.35em); }
 
+/* the logo band drifts by at an even walking pace */
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+.marquee { animation: marquee 36s linear infinite; }
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { opacity: 1; transform: none; transition: none; }
-  .feed-item, .fade-in, .rise-in, .slow-zoom, .pulse-once { animation: none; }
+  .feed-item, .fade-in, .rise-in, .slow-zoom, .pulse-once, .marquee { animation: none; }
   * { transition-duration: 0.01ms !important; }
 }
