@@ -39,7 +39,7 @@ export default function HomeClient() {
           </h1>
           <p className="lede mt-6 max-w-md">Personalizing your preventive health.</p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
-            <a href="https://www.jeanihealth.com/waitlist" className="btn btn-accent">
+            <a href="/waitlist" className="btn btn-accent">
               Start your free trial
             </a>
             <Link href="/product" className="btn btn-ghost">

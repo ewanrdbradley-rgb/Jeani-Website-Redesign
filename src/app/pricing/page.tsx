@@ -53,7 +53,7 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <a href="https://www.jeanihealth.com/waitlist" className="btn btn-ghost mt-8 w-full justify-center">
+            <a href="/waitlist" className="btn btn-ghost mt-8 w-full justify-center">
               Start your free trial
             </a>
           </div>
@@ -76,7 +76,7 @@ export default function PricingPage() {
                 </li>
               ))}
             </ul>
-            <a href="https://www.jeanihealth.com/waitlist" className="btn btn-accent mt-8 w-full justify-center">
+            <a href="/waitlist" className="btn btn-accent mt-8 w-full justify-center">
               Start your free trial
             </a>
           </div>

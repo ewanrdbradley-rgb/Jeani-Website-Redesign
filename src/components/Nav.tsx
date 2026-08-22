@@ -62,7 +62,7 @@ export default function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <a href="https://www.jeanihealth.com/waitlist" className="btn btn-cobalt !px-5 !py-2.5 text-sm">
+          <a href="/waitlist" className="btn btn-cobalt !px-5 !py-2.5 text-sm">
             Start free trial
           </a>
           <MobileMenu pathname={pathname} />

@@ -47,13 +47,13 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <a
-              href="https://www.jeanihealth.com/privacy"
+              href="/privacy"
               className="text-sm text-cobalt/50 transition-colors hover:text-accent"
             >
               Privacy
             </a>
             <a
-              href="https://www.jeanihealth.com/terms"
+              href="/terms"
               className="text-sm text-cobalt/50 transition-colors hover:text-accent"
             >
               Terms
