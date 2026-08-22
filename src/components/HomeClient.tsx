@@ -10,7 +10,7 @@ import Photo from "./Photo";
 import ParallaxBand from "./ParallaxBand";
 import Streams from "./Streams";
 import PhoneCarousel from "./PhoneCarousel";
-import ChatBubbles from "./ChatBubbles";
+import VoiceDemo from "./VoiceDemo";
 import Chips from "./Chips";
 import CountUp from "./CountUp";
 import ClosingCta from "./ClosingCta";
@@ -170,9 +170,12 @@ export default function HomeClient() {
             <p className="lede mt-4 max-w-md">
               No streaks, no confetti, no noise. Jeani writes to you in the terms of
               the goal you set, and only when there is something worth acting on.
+              Pick a moment and watch how the conversation goes.
             </p>
           </Reveal>
-          <ChatBubbles goal={goal} />
+          <Reveal delay={100}>
+            <VoiceDemo />
+          </Reveal>
         </div>
       </section>
 
