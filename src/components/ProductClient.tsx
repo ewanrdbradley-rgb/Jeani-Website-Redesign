@@ -198,7 +198,7 @@ export default function ProductClient() {
 
         <ClosingCta
           headline="Your goal is waiting."
-          sub="A seven-day free trial. Your dashboard rebuilds around it from day one."
+          sub="Two weeks free. Your dashboard rebuilds around it from day one."
         />
       </ThreadLine>
     </>
