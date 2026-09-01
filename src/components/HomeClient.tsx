@@ -255,7 +255,7 @@ export default function HomeClient() {
       {/* 8 · closing */}
       <ClosingCta
         headline="Staying active longer. Living without limits."
-        sub="Two weeks free, built around your goal from the first morning."
+        sub="A seven-day free trial, built around your goal from the first morning."
       />
     </ThreadLine>
   );

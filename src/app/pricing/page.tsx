@@ -6,7 +6,7 @@ import ClosingCta from "@/components/ClosingCta";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "One plan. Yours. Two weeks free, then monthly or annual.",
+  description: "One plan. Yours. Seven-day free trial, then monthly or annual.",
 };
 
 const INCLUDED = [
@@ -30,7 +30,7 @@ export default function PricingPage() {
           <p className="eyebrow">Pricing</p>
           <h1 className="headline h-hero mt-3">One plan. Yours.</h1>
           <p className="lede mt-5 max-w-lg">
-            Every subscription opens with a two-week free trial, built around your
+            Every subscription opens with a seven-day free trial, built around your
             goal from the first morning.
           </p>
         </Reveal>
@@ -44,7 +44,7 @@ export default function PricingPage() {
               $19.99
               <span className="text-base font-semibold text-cobalt/60"> /month</span>
             </p>
-            <p className="small-note mt-2">Two weeks free, then monthly.</p>
+            <p className="small-note mt-2">Seven-day free trial, then monthly.</p>
             <ul className="mt-6 flex flex-col gap-2.5">
               {INCLUDED.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
@@ -67,7 +67,7 @@ export default function PricingPage() {
               $199.99
               <span className="text-base font-semibold text-cobalt/60"> /year</span>
             </p>
-            <p className="small-note mt-2">Two weeks free, then one payment a year.</p>
+            <p className="small-note mt-2">Seven-day free trial, then one payment a year.</p>
             <ul className="mt-6 flex flex-col gap-2.5">
               {INCLUDED.map((item) => (
                 <li key={item} className="flex items-start gap-2.5">
@@ -113,7 +113,7 @@ export default function PricingPage() {
       <div id="start">
         <ClosingCta
           headline="Staying active longer starts today."
-          sub="Two weeks free. Cancel anytime."
+          sub="Seven-day free trial. Cancel anytime."
         />
       </div>
     </ThreadLine>

@@ -142,7 +142,7 @@ export default function StoryPage() {
 
       <ClosingCta
         headline="Keep moving with us."
-        sub="Two weeks free, in your terms from the first morning."
+        sub="A seven-day free trial, in your terms from the first morning."
       />
     </ThreadLine>
   );
